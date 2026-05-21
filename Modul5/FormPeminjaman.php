@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <select name="id_buku" required>
             <option value="">Pilih Buku</option>
             <?php foreach ($buku as $b): ?>
-                <option value="<?= $b['id'] ?>" <?= (isset($peminjam['id_buku']) && $peminjam['id_buku'] == $b['id']) ? 'selected' : '' ?>>
+                <option value="<?= $b['id_buku'] ?>" <?= (isset($peminjam['id_buku']) && $peminjam['id_buku'] == $b['id_buku']) ? 'selected' : '' ?>>
                     <?= htmlspecialchars($b['judul_buku']) ?>
                 </option>
             <?php endforeach; ?>
