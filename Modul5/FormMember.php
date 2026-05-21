@@ -44,15 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="nama" value="<?= htmlspecialchars($member['nama_member'] ?? '') ?>" required><br>
 
         <label for="nomor">Nomor:</label><br>
-        <input type="text" name="nomor" value="<?= htmlspecialchars($member['nomor_member'] ?? '') ?>" required><br>
+        <input type="number" name="nomor" value="<?= htmlspecialchars($member['nomor_member'] ?? '') ?>" required><br>
 
         <label for="alamat">Alamat:</label><br>
         <textarea name="alamat" required><?= htmlspecialchars($member['alamat'] ?? '') ?></textarea><br>
 
-        <label for="tgl_daftar">Tanggal Daftar:</label><br>
-        <input type="date" name="tgl_daftar" value="<?= htmlspecialchars($member['tgl_mendaftar'] ?? '') ?>" required><br>
+        <label for="tgl_daftar">Tanggal Daftar:</label>
+        <input type="datetime-local" name="tgl_daftar" value="<?= htmlspecialchars($member['tgl_mendaftar'] ?? '') ?>" required><br>
 
-        <label for="tgl_bayar">Tanggal Terakhir Bayar:</label><br>
+        <label for="tgl_bayar">Tanggal Terakhir Bayar:</label>
         <input type="date" name="tgl_bayar" value="<?= htmlspecialchars($member['tgl_terkahir_bayar'] ?? '') ?>" required><br><br>
 
         <button type="submit">
