@@ -4,6 +4,7 @@ require_once 'Model.php';
 $model = new PeminjamanModel(getConnection());
 if (isset($_GET['delete'])) {
     $model->deletePeminjaman($_GET['delete']);
+    $model->resetAutoIncrement();
     header("Location: Peminjaman.php");
     exit;
 }

@@ -5,6 +5,7 @@ require_once 'Model.php';
 $model = new BukuModel(getConnection());
 if (isset($_GET['delete'])) {
     $model->deleteBuku($_GET['delete']);
+    $model->resetAutoIncrement();
     header("Location: Buku.php");
     exit;
 }

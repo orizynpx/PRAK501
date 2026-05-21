@@ -61,6 +61,11 @@ class MemberModel {
         $this->conn->query("SET FOREIGN_KEY_CHECKS=1");
         return true;
     }
+
+    public function resetAutoIncrement() {
+        $this->conn->query("ALTER TABLE member AUTO_INCREMENT = 1");
+        return true;
+    }
 }
 
 class BukuModel {
@@ -120,6 +125,11 @@ class BukuModel {
         $this->conn->query("SET FOREIGN_KEY_CHECKS=0");
         $this->conn->query("TRUNCATE TABLE buku");
         $this->conn->query("SET FOREIGN_KEY_CHECKS=1");
+        return true;
+    }
+
+    public function resetAutoIncrement() {
+        $this->conn->query("ALTER TABLE buku AUTO_INCREMENT = 1");
         return true;
     }
 }
@@ -187,6 +197,11 @@ class PeminjamanModel {
         $this->conn->query("SET FOREIGN_KEY_CHECKS=0");
         $this->conn->query("TRUNCATE TABLE peminjaman");
         $this->conn->query("SET FOREIGN_KEY_CHECKS=1");
+        return true;
+    }
+
+    public function resetAutoIncrement() {
+        $this->conn->query("ALTER TABLE peminjaman AUTO_INCREMENT = 1");
         return true;
     }
 }

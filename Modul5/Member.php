@@ -5,6 +5,7 @@ require_once 'Model.php';
 $model = new MemberModel(getConnection());
 if (isset($_GET['delete'])) {
     $model->deleteMember($_GET['delete']);
+    $model->resetAutoIncrement();
     header("Location: Member.php");
     exit;
 }
