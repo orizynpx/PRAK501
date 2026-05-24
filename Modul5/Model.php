@@ -55,13 +55,6 @@ class MemberModel {
         return $stmt->execute();
     }
 
-    public function truncateTable() {
-        $this->conn->query("SET FOREIGN_KEY_CHECKS=0");
-        $this->conn->query("TRUNCATE TABLE member");
-        $this->conn->query("SET FOREIGN_KEY_CHECKS=1");
-        return true;
-    }
-
     public function resetAutoIncrement() {
         $this->conn->query("ALTER TABLE member AUTO_INCREMENT = 1");
         return true;
@@ -119,13 +112,6 @@ class BukuModel {
         $stmt = $this->conn->prepare("DELETE FROM buku WHERE id_buku = :id_buku");
         $stmt->bindParam(':id_buku', $id_buku);
         return $stmt->execute();
-    }
-
-    public function truncateTable() {
-        $this->conn->query("SET FOREIGN_KEY_CHECKS=0");
-        $this->conn->query("TRUNCATE TABLE buku");
-        $this->conn->query("SET FOREIGN_KEY_CHECKS=1");
-        return true;
     }
 
     public function resetAutoIncrement() {
@@ -191,13 +177,6 @@ class PeminjamanModel {
         $stmt = $this->conn->prepare("DELETE FROM peminjaman WHERE id_peminjaman = :id_peminjaman");
         $stmt->bindParam(':id_peminjaman', $id_peminjaman);
         return $stmt->execute();
-    }
-
-    public function truncateTable() {
-        $this->conn->query("SET FOREIGN_KEY_CHECKS=0");
-        $this->conn->query("TRUNCATE TABLE peminjaman");
-        $this->conn->query("SET FOREIGN_KEY_CHECKS=1");
-        return true;
     }
 
     public function resetAutoIncrement() {

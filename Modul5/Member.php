@@ -9,11 +9,6 @@ if (isset($_GET['delete'])) {
     header("Location: Member.php");
     exit;
 }
-if (isset($_GET['truncate'])) {
-    $model->truncateTable();
-    header("Location: Buku.php");
-    exit;
-}
 $members = $model->getAllMember();
 ?>
 <!DOCTYPE html>
@@ -28,7 +23,6 @@ $members = $model->getAllMember();
     <nav class="navbar">
         <button onclick="location.href='index.php'">Home</button>
         <button onclick="location.href='FormMember.php'">Tambah Member</button>
-        <button onclick="if(confirm('Apakah Anda yakin ingin menghapus semua data member?')) location.href='Member.php?truncate=1'">Clear Member</button>
     </nav>
     <h1>Data Member</h1>
     <table border="1">

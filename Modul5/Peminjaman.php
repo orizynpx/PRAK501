@@ -8,11 +8,6 @@ if (isset($_GET['delete'])) {
     header("Location: Peminjaman.php");
     exit;
 }
-if (isset($_GET['truncate'])) {
-    $model->truncateTable();
-    header("Location: Buku.php");
-    exit;
-}
 $peminjaman = $model->getAllPeminjaman();
 ?>
 <!DOCTYPE html>
@@ -27,7 +22,6 @@ $peminjaman = $model->getAllPeminjaman();
     <nav class="navbar">
         <button onclick="location.href='index.php'">Home</button>
         <button onclick="location.href='FormPeminjaman.php'">Tambah Peminjaman</button>
-        <button onclick="if(confirm('Apakah Anda yakin ingin menghapus semua data peminjaman?')) location.href='Peminjaman.php?truncate=1'">Clear Peminjaman</button>
     </nav>
     <h1>Data Peminjaman</h1>
     <table border="1">
