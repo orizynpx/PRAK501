@@ -76,3 +76,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="Peminjaman.php">Batal</a>
     </form>
 </body>
+</html>
