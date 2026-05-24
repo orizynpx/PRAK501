@@ -9,9 +9,9 @@
     $value_arr = [];
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $panjang = isset($_POST['panjang']) ? $_POST['panjang'] : "";
-        $lebar = isset($_POST['lebar']) ? $_POST['lebar'] : "";
-        $value = isset($_POST['value']) ? $_POST['value'] : "";
+        $panjang = $_POST['panjang'] ?? "";
+        $lebar = $_POST['lebar'] ?? "";
+        $value = $_POST['value'] ?? "";
         $value_arr = explode(" ", trim($value));
     }
     ?>
