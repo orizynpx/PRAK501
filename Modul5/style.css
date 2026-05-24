@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(150deg, #d400ff 35%, #ff00b3 75%);
+    background: #a9a9a9;
     min-height: 100vh;
     padding: 20px;
 }
@@ -18,7 +18,7 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     background-color: #8400ff;
     padding: 15px 20px;
-    border: #ffcbf4 solid 2px;
+    border: #ffffff solid 2px;
     border-radius: 16px;
     margin: 20px auto;
     display: block;
@@ -38,7 +38,7 @@ nav.navbar {
     padding: 15px 20px;
     border-radius: 8px;
     margin: 20px auto;
-    border: #ffcbf4 solid 2px;
+    border: #ffffff solid 2px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
@@ -49,7 +49,7 @@ nav.navbar {
 nav.navbar button {
     background: rgba(255, 255, 255, 0.2);
     color: white;   
-    border: 2px solid #ffcbf4;
+    border: 2px solid #ffffff;
     margin: 0 64px;
     padding: 10px 24px;
     border-radius: 5px;
