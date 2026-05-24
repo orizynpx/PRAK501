@@ -60,5 +60,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </button>
         <a href="Member.php">Batal</a>
     </form>
-
+</body>
 </html>
