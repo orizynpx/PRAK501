@@ -1,7 +1,7 @@
 <?php
 function getConnection() {
-    $host = getenv('DB_HOST') ?? 'localhost';
-    $dbname = getenv('DB_NAME') ?? 'prak501_db';
+    $host = getenv('DB_HOST');
+    $dbname = getenv('DB_NAME');
     $username = getenv('DB_USER');
     $password = getenv('DB_PASS');
 
