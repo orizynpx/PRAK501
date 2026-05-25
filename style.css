@@ -11,8 +11,8 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  background-color: #f8fafc;
-  color: #334155;
+  background-color: ghostwhite;
+  color: darkslategray;
   padding: 2rem;
   min-height: 100vh;
 }
@@ -51,17 +51,17 @@ body {
 }
 
 .header h1 {
-  color: #0f172a;
+  color: black;
   font-size: 1.75rem;
   font-weight: 700;
 }
 
 .card h1 {
-  color: #0f172a;
+  color: black;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid whitesmoke;
   padding-bottom: 1rem;
 }
 
@@ -73,7 +73,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #64748b;
+  color: slategray;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
@@ -81,7 +81,7 @@ body {
 }
 
 .back-link:hover {
-  color: #0f172a;
+  color: black;
 }
 
 .back-link svg {
@@ -89,35 +89,36 @@ body {
   height: 1.25rem;
 }
 
-/* Status Badges (Index) */
+/* Status Badges */
 
 .status-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .status-badge.success {
-  background-color: #dcfce7;
-  color: #166534;
-  border: 1px solid #bbf7d0;
+    background-color: honeydew;
+    color: darkgreen;
+    border: 1px solid palegreen;
 }
 
 .status-badge.error {
-  background-color: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fecaca;
+    background-color: mistyrose;
+    color: darkred;
+    border: 1px solid pink;
 }
+
 
 /* Cards (Index & Forms) */
 
 .card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: white;
+  border: 1px solid gainsboro;
   border-radius: 1rem;
   padding: 2.5rem 1.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -134,11 +135,11 @@ body {
 .grid-container .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  border-color: #cbd5e1;
+  border-color: lightgray;
 }
 
 .card-icon {
-  color: #3b82f6;
+  color: dodgerblue;
   margin-bottom: 1.25rem;
   display: flex;
   justify-content: center;
@@ -150,14 +151,14 @@ body {
 }
 
 .card h2 {
-  color: #1e293b;
+  color: midnightblue;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .card p {
-  color: #64748b;
+  color: slategray;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -189,44 +190,44 @@ body {
 }
 
 .btn-secondary {
-  background-color: #ffffff;
-  color: #475569;
-  border-color: #cbd5e1;
+  background-color: white;
+  color: dimgray;
+  border-color: lightgray;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .btn-secondary:hover {
-  background-color: #f1f5f9;
-  color: #0f172a;
+  background-color: whitesmoke;
+  color: black;
 }
 
 .btn-primary {
-  background-color: #2563eb;
-  color: #ffffff;
+  background-color: royalblue;
+  color: white;
   box-shadow: 0 1px 2px rgba(37, 99, 235, 0.1);
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8;
+  background-color: mediumblue;
 }
 
 .btn-ghost {
   background-color: transparent;
-  color: #64748b;
+  color: slategray;
 }
 
 .btn-ghost:hover {
-  background-color: #f1f5f9;
-  color: #0f172a;
+  background-color: whitesmoke;
+  color: black;
 }
 
 .btn-danger {
-  background-color: #fee2e2;
-  color: #b91c1c;
+  background-color: mistyrose;
+  color: firebrick;
 }
 
 .btn-danger:hover {
-  background-color: #fecaca;
+  background-color: pink;
 }
 
 .btn-sm {
@@ -237,8 +238,8 @@ body {
 /* Tables */
 
 .table-wrapper {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: white;
+  border: 1px solid gainsboro;
   border-radius: 0.75rem;
   overflow-x: auto;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -252,19 +253,19 @@ table {
 }
 
 th {
-  background-color: #f8fafc;
-  color: #64748b;
+  background-color: ghostwhite;
+  color: slategray;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid gainsboro;
 }
 
 td {
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid gainsboro;
   font-size: 0.875rem;
   vertical-align: middle;
 }
@@ -274,7 +275,7 @@ tr:last-child td {
 }
 
 tr:hover td {
-  background-color: #f8fafc;
+  background-color: ghostwhite;
 }
 
 .action-cell {
@@ -284,7 +285,7 @@ tr:hover td {
 
 .empty-state {
   text-align: center;
-  color: #94a3b8;
+  color: darkgray;
   padding: 2rem;
 }
 
@@ -298,7 +299,7 @@ label {
   display: block;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #475569;
+  color: dimgray;
   margin-bottom: 0.5rem;
 }
 
@@ -312,9 +313,9 @@ textarea {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   font-family: inherit;
-  color: #0f172a;
-  background-color: #f8fafc;
-  border: 1px solid #cbd5e1;
+  color: black;
+  background-color: ghostwhite;
+  border: 1px solid lightgray;
   border-radius: 0.5rem;
   transition: all 0.2s;
 }
@@ -326,8 +327,8 @@ input[type="datetime-local"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: #3b82f6;
-  background-color: #ffffff;
+  border-color: dodgerblue;
+  background-color: white;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
@@ -339,7 +340,7 @@ textarea {
 select {
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='gray' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
   background-position: right 0.5rem center;
   background-repeat: no-repeat;
   background-size: 1.5em 1.5em;
@@ -352,5 +353,5 @@ select {
   gap: 1rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid whitesmoke;
 }

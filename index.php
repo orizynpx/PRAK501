@@ -11,7 +11,7 @@
 <body>
 
     <div class="header">
-        <h1>Sistem Perpustakaan</h1>
+        <h1 class="header">Sistem Perpustakaan</h1>
     </div>
 
     <div class="grid-container">
