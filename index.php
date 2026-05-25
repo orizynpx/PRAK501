@@ -1,13 +1,23 @@
+<?php
+include 'Koneksi.php';
+$check_db = $conn->query("SHOW TABLES");
+if ($check_db) {
+    echo "<div style='background:#d4edda;color:#155724;padding:10px;margin:10px 0;'>";
+    echo "<strong>DB Connected!</strong> Tables found: " . $check_db->num_rows;
+    echo "</div>";
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Sistem Perpustakaan</title>
+    <title>Sistem Perpustakaan PRAK501</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Sistem Perpustakaan</h1>
+    <h1>Selamat datang di Sistem Perpustakaan PRAK501</h1>
     <div class="cards-container">
         <div class="card" onclick="location.href='Buku.php'">
             <div class="card-icon">📚</div>
