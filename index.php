@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 try {
-    include 'Koneksi.php';
+    require 'Koneksi.php';
     
     $check_db = @$conn->query("SHOW TABLES");
     if ($check_db) {
