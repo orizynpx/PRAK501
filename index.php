@@ -1,146 +1,17 @@
-<?php
-error_reporting(E_ALL); 
-ini_set('display_errors', 1);
-
-$db_status = "";
-$is_connected = false;
-
-try {
-    require 'Koneksi.php';
-    $conn = getConnection();
-    
-    $tables = $conn->query("SHOW TABLES")->fetchAll(PDO::FETCH_COLUMN);
-    $db_status = "DB Connected Successfully! (" . count($tables) . " tables found)";
-    $is_connected = true;
-} catch (PDOException $e) {
-    $db_status = "Database Error: " . $e->getMessage();
-}
-?>
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Perpustakaan</title>
+    <title>Sistem Perpustakaan PRAK501</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-    /* --- Reset & Base Styles --- */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: system-ui, -apple-system, sans-serif;
-        background-color: #f8fafc;
-        color: #334155;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        padding: 3rem 1.5rem;
-    }
-
-    /* --- Header & Typography --- */
-    .header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    h1 {
-        color: #0f172a;
-        font-size: 2.25rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-        letter-spacing: -0.025em;
-    }
-
-    /* --- Status Badge --- */
-    .status-badge {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        border-radius: 9999px;
-        font-size: 0.875rem;
-        font-weight: 500;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    }
-
-    .status-badge.success {
-        background-color: #dcfce7;
-        color: #166534;
-        border: 1px solid #bbf7d0;
-    }
-
-    .status-badge.error {
-        background-color: #fee2e2;
-        color: #991b1b;
-        border: 1px solid #fecaca;
-    }
-
-    /* --- Grid & Cards --- */
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        width: 100%;
-        max-width: 1000px;
-    }
-
-    .card {
-        background-color: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 1rem;
-        padding: 2.5rem 1.5rem;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        border-color: #cbd5e1;
-    }
-
-    .card-icon {
-        color: #3b82f6;
-        /* Blue icon color */
-        margin-bottom: 1.25rem;
-        display: flex;
-        justify-content: center;
-    }
-
-    .card-icon svg {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-
-    .card h2 {
-        color: #1e293b;
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-
-    .card p {
-        color: #64748b;
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-    </style>
 </head>
 
 <body>
 
     <div class="header">
         <h1>Sistem Perpustakaan</h1>
-        <div class="status-badge <?= $is_connected ? 'success' : 'error' ?>">
-            <?= htmlspecialchars($db_status) ?>
-        </div>
     </div>
 
     <div class="grid-container">
