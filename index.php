@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 
 try {
     require 'Koneksi.php';
+    $conn = getConnection();
     
     $tables = $conn->query("SHOW TABLES")->fetchAll(PDO::FETCH_COLUMN);
     
